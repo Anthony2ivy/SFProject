@@ -1,0 +1,37 @@
+html {
+	background-color: rgb(67, 66, 64);
+}
+
+th,
+td {
+	border: 1px solid white;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+}
+
+.figure {
+	width: 80px !important;
+	height: inherit;
+}
+
+h4 {
+	color: #fff;
+}
+
+#datatable {
+	background-color: rgb(207,154,95);
+	width: 400px;
+	height: 200px;
+	display: block;
+	position: relative;
+	float: left;
+}
+
+#data {
+	border: solid 1px #FFFFFF;
+	color: #FFFFFF;
+	padding-left: 0px;
+	margin-left: 10px;
+	border-collapse: collapse;
+}
