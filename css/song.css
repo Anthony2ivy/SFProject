@@ -1,4 +1,4 @@
-html {
+html,body {
 	background-color: rgb(67, 66, 64);
 	padding: 0;
 	margin: 0;
@@ -11,6 +11,15 @@ td {
 	width: 30px;
 	height: 30px;
 	text-align: center;
+}
+.titleSet{
+	display: block;
+	background-color: #FFFFFF;
+	color: #000000;
+	height: 40px;
+	border-bottom: solid 1px red;
+	margin: 0;
+	padding: 1px 0 20px 20px;
 }
 
 .figure {
@@ -29,11 +38,11 @@ h4 {
 	background-color: rgb(207,154,95);
 	width: 500px;
 	height: 140px;
+	margin-top: 120px;
 	display: block;
 	position: relative;
 	float: left;
 }
-
 #data {
 	border: solid 1px #FFFFFF;
 	color: #FFFFFF;
@@ -43,7 +52,7 @@ h4 {
 	border-collapse: collapse;
 }
 .semiCircle{
-	display: inline-block;
+	 display: inline-block;
 	 margin-top: 10px;
 	 height: 16px;
 	 width: 8px;
@@ -53,4 +62,16 @@ h4 {
 
 .plus{
 	margin-top: -10px;
+}
+
+#chart{
+	margin: 0;
+	padding: 50px 0 0 0;
+	width: 500px;
+	
+}
+.canvasSize{
+	width: 480px;
+	float: left;
+	
 }

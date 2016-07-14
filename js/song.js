@@ -20,7 +20,7 @@ ctx.fillText("80", -20, -115);
 ctx.fillText("100", -25, -145);
 ctx.fillText("个数", -40, -175);
 ctx.fillText("月份", 270, 10);
-
+ctx.fillText("运单量",125,-185);
 ctx.strokeStyle = "rgb(207,207,207)";
 for(var i = 1; i < 6; i++) {
 	ctx.moveTo(0, i * (-30));
@@ -31,6 +31,7 @@ ctx.moveTo(0, 0);
 ctx.lineWidth = 2;
 
 for(var i = 1; i < 13; i++) {
+	
 	ctx.moveTo(i * 20, 0);
 	ctx.lineTo(i * 20, -5);
 	ctx.stroke();
@@ -60,3 +61,14 @@ for(var i = 0; i < 11; i++) {
 	ctx.stroke();
 }
 ctx.restore();
+
+chart.onmouseover = function(e){
+//	var absolutePos =chart.getBoundingClientRect();
+//	var x = e.pageX-absolutePos.left*(chart.width/absolutePos.width);
+//	var y = e.pageY-absolutePos.top*(chart.height/absolutePos.height);
+	alert("x="+e.pageX+"y="+e.pageY);
+//if(e.pageX>123&&e.pageX<128&&e.pageY>530&&e.pageY<550)
+//	alert("asdhwiud");
+//}
+	
+}
