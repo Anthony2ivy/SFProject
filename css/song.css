@@ -1,9 +1,12 @@
 html {
 	background-color: rgb(67, 66, 64);
+	padding: 0;
+	margin: 0;
 }
 
 th,
 td {
+	padding: 0;
 	border: 1px solid white;
 	width: 30px;
 	height: 30px;
@@ -12,17 +15,20 @@ td {
 
 .figure {
 	width: 80px !important;
-	height: inherit;
+	height: 30px;
 }
 
 h4 {
 	color: #fff;
 }
-
+.title{
+	margin-left: 20px;
+	margin-top: -10px;
+}
 #datatable {
 	background-color: rgb(207,154,95);
-	width: 400px;
-	height: 200px;
+	width: 500px;
+	height: 140px;
 	display: block;
 	position: relative;
 	float: left;
@@ -31,7 +37,20 @@ h4 {
 #data {
 	border: solid 1px #FFFFFF;
 	color: #FFFFFF;
+	margin-top: 0px;
 	padding-left: 0px;
-	margin-left: 10px;
+	margin-left: 20px;
 	border-collapse: collapse;
+}
+.semiCircle{
+	display: inline-block;
+	 margin-top: 10px;
+	 height: 16px;
+	 width: 8px;
+	 background-color: rgb(67, 66, 64);
+	 border-radius: 0 8px 8px 0;
+}
+
+.plus{
+	margin-top: -10px;
 }
