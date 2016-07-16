@@ -93,5 +93,9 @@ h4 {
 }
 .dataChart{
 	margin-bottom: 50px;
-	height: 400px;
+	height: 390px;
+}
+.container{
+	width: 1150px;
+	margin: 0 auto;
 }
