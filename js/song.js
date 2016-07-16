@@ -1,14 +1,20 @@
+function fillchart(chart,valuepic){
 mistakeStep = 13; //允许点击的误差范围
 point = new Map();
 pointValue = new Map();//值
 months = new Array();//横坐标
 dataset = new Array(); //全局数组
-
+var c;
+var ctx;
+var part;
+var pic = new Image();
+pic.src = "img/qipao.png";
 for(var i = 1; i < 13; i++) {
 	months.push(i * 20 + 100); //横坐标元素
 }
-var c = document.getElementById("chart");
-var ctx = c.getContext("2d");
+
+c =chart;
+ctx = c.getContext("2d");
 ctx.save();
 ctx.beginPath();
 ctx.strokeStyle = "rgb(68,67,65)";
@@ -38,6 +44,7 @@ ctx.fillText("40", -20, -55);
 ctx.fillText("60", -20, -85);
 ctx.fillText("80", -20, -115);
 ctx.fillText("100", -25, -145);
+
 ctx.fillText("个数", -40, -175);
 ctx.fillText("月份", 270, 10);
 ctx.fillText("运单量", 125, -185);
@@ -90,16 +97,16 @@ ctx.restore();
 //得到内部坐标
 function getEventPosition(ev, x, y) {
 	var x, y;
-	var absolutePos = canvas.getBoundingClientRect();
+	var absolutePos = c.getBoundingClientRect();
 	//	alert(absolutePos.left);
 	return {
-		x: x - absolutePos.left * (canvas.width / absolutePos.width),
-		y: y - absolutePos.top * (canvas.height / absolutePos.height)
+		x: x - absolutePos.left * (c.width / absolutePos.width),
+		y: y - absolutePos.top * (c.height / absolutePos.height)
 	};
 }
 //事件监听
-canvas = document.getElementById("chart");
-canvas.addEventListener('mousemove', function(e) {
+c.addEventListener('mousemove', function(e) {
+	
 	p = getEventPosition(e, e.clientX, e.clientY);
 	var x = parseInt(p.x);
 	var y = parseInt(p.y);
@@ -111,8 +118,8 @@ canvas.addEventListener('mousemove', function(e) {
 				//把 map 里的 key 值转为数字
 				var valueY = Math.abs(y - parseInt(point.get(months[i - 1])));
 				if(parseInt(valueY) < parseInt(mistakeStep)) {
-					//					alert(pointValue.get(months[i - 1]));
-					loadPic(months[i - 1]-8, point.get(months[i - 1]) - 20, pointValue.get(months[i - 1]));
+					
+					loadPic1(months[i - 1]-8, point.get(months[i - 1]) - 20, pointValue.get(months[i - 1]));
 					break;
 				}
 				break;
@@ -121,32 +128,30 @@ canvas.addEventListener('mousemove', function(e) {
 	}
 });
 //绘制起泡图片
-function drawPic(x, y, pic, value) {
+function drawPic1(x, y, pic, value) {
 //	var canvas2 = document.getElementById("valuePic");
 //	var ctx2 = canvas2.getContext("2d");
-	var part = document.getElementById("valuePic");
-	
+	part = valuepic;
 	y = parseInt(y)+44;	
 	part.style.top=y+"px";
 	part.style.left= x+"px";
-	part.style.width="30px";
-	part.style.height="30px";
+	part.style.width="40px";
+	part.style.height="40px";
 	part.innerHTML= value;
 	part.style.textAlign="center";
-	part.style.lineHeight="28px";
+	part.style.lineHeight="30px";
 //	par.style.backgroundImage 
 //	ctx2.drawImage(pic, x, y, 25, 25);
 //	ctx2.fillText(value, x + 6, y + 15);
 }
 //气泡图片加载
-function loadPic(x, y, value) {
-	var pic = new Image();
-	pic.src = "img/qipao.png";
+function loadPic1(x, y, value) {
+	
 	if(pic.complete) {
-		drawPic(x, y, pic, value);
+		drawPic1(x, y, pic, value);
 	} else {
 		pic.onload = function() {
-			drawPic(x, y, pic, value);
+			drawPic1(x, y, pic, value);
 		}
 	}
 	pic.onerror = function() {
@@ -159,3 +164,7 @@ if(document.all) {
 } else {
 	//	window.addEventListener('load',load);
 }
+}
+fillchart(document.getElementsByClassName("chart")[0],document.getElementsByClassName("valuePic")[0]);
+fillchart(document.getElementsByClassName("chart")[1],document.getElementsByClassName("valuePic")[1]);
+

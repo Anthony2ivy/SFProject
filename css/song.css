@@ -34,7 +34,7 @@ h4 {
 	margin-left: 20px;
 	margin-top: -10px;
 }
-#datatable {
+.datatable {
 	background-color: rgb(207,154,95);
 	width: 500px;
 	height: 140px;
@@ -47,7 +47,7 @@ h4 {
 	position: relative;
 	float: left;
 }
-#data {
+.data {
 	border: solid 1px #FFFFFF;
 	color: #FFFFFF;
 	margin-top: 0px;
@@ -70,7 +70,8 @@ h4 {
 	margin-top: -10px;
 }
 
-#chart{
+.chart{
+	position: relative;
 	margin-left: 0px;
 	padding: 0 0 0 0;
 	width: 500px;
@@ -84,10 +85,13 @@ h4 {
 	float: left;
 	
 }
-#valuePic{
+.valuePic{
 	position: absolute;
 	background-image: url(../img/qipao.png);
 	background-size: 100% 100%;
 	
 }
-
+.dataChart{
+	margin-bottom: 50px;
+	height: 400px;
+}
