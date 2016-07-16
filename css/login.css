@@ -1,0 +1,244 @@
+html,
+body {
+	margin: 0;
+	height: 100%;
+	background-image: url(../img/login/background.png);
+	background-size: cover;
+	font-family: "微软雅黑";
+}
+
+#header {
+	height: 130px;
+	background: white;
+	box-shadow: rgba(0, 0, 0, 0.6) 0 0 3px;
+	padding-top: 20px;
+}
+
+#content {}
+
+.logo {
+	display: inline-block;
+	margin: 0 0 0 150px;
+	margin-right: 0;
+	padding: 0 0;
+	height: 70px;
+	background-repeat: no-repeat;
+	width: 223px;
+	display: block;
+	background-size: auto;
+}
+
+.img-a {
+	display: block;
+	width: 223px;
+}
+
+#login-panel {
+	background-image: url(../img/login/loginBackground.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	width: 700px;
+	height: 350px;
+	z-index: 999;
+	margin: 10% auto;
+	padding-top: 20px;
+	position: relative;
+}
+
+#login-panel img.logo {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.input-role {
+	width: 100%;
+	height: 50px;
+}
+
+.login-form {
+	padding: 40px 115px 0 115px;
+}
+
+.login-form .form-group {
+	text-align: center;
+	height: 35px;
+}
+
+.login-form input {
+	height: 35px;
+	width: 100%;
+}
+
+.left50 {
+	display: inline-block;
+	margin-left: 0;
+	margin-right: 0;
+	width: 48%;
+	margin-right: 2%;
+	float: left;
+}
+
+.right50 {
+	display: inline-block;
+	margin-right: 0;
+	margin-right: 0;
+	width: 48%;
+	margin-left: 2%;
+	float: right;
+}
+
+.icon-input {
+	position: relative;
+}
+
+.icon-input img {
+	position: absolute;
+	display: block;
+	top: 7px;
+	left: 10px;
+	width: 18px;
+	height: 20px;
+}
+
+.icon-input input {
+	padding-left: 35px;
+}
+
+.login-input {
+	border: 1px rgba(158, 158, 158, 0.61) solid;
+	border-radius: 3px;
+	box-shadow: rgba(158, 158, 158, 0.61) 0 0 5px inset;
+	font-family: "微软雅黑";
+	padding-left: 10px;
+}
+
+.login-btn {
+	background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(158, 158, 158, 0.26));
+	border: 1px rgba(158, 158, 158, 0.66) solid;
+	border-radius: 3px;
+	height: 35px;
+	width: 100%;
+	box-shadow: rgba(158, 158, 158, 0.61) 0 0 5px;
+	font-family: "微软雅黑";
+	color: rgba(15, 82, 167, 1);
+	text-shadow: rgba(158, 158, 158, 0.61) 0 0 5px;
+}
+
+.login-btn:active {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.14), rgba(255, 255, 255, 1));
+	box-shadow: rgba(158, 158, 158, 0.61) 0 0 5px inset;
+}
+
+#close-btn {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	cursor: pointer;
+	right: 30px;
+}
+
+#close-btn img {
+	width: 100%;
+	height: 100%;
+}
+
+#forget-pass {
+	cursor: pointer;
+	color: #757575;
+}
+
+#forget-pass:hover,
+#forget-pass:focus {
+	color: #337ab7;
+	text-decoration: none;
+}
+
+#account-center {
+	border: 1px solid rgb(37, 76, 160);
+	width: 100px;
+	height: 35px;
+	border-radius: 10px;
+	cursor: pointer;
+	color: rgb(37, 76, 160);
+	margin: 30px 10% 0;
+	font-family: "微软雅黑";
+}
+
+#account-center img {
+	margin: 5px 5px 5px 5px;
+}
+
+.footer {
+	font-family: "微软雅黑";
+	width: 100%;
+	text-align: center;
+	color: rgb(37, 76, 160);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 60px;
+}
+
+.option-panel {
+	margin-top: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+	height: 600px;
+}
+
+.option-block {
+	list-style: none;
+	height: 600px;
+	
+}
+
+.option-block li {
+	display: block;
+	padding: 15% 3% 0 3%;
+	width: 25%;
+	display: inline-block;
+	float: left;
+	font-family: "微软雅黑";
+	text-align: center;
+	color: white;
+}
+.option-btn
+{
+	width: 150px;
+	height: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 60px;
+	cursor: pointer;
+	transition: all 0.6s; 
+}
+#option-btn1
+{
+	background-image:url(../img/login/customerProfile.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+#option-btn1:hover
+{
+	background-image: url(../img/login/customerProfile_toucle.png);
+}
+#option-btn2
+{
+	background: url(../img/login/under_construction.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+#option-btn3
+{
+	background-image: url(../img/login/under_construction.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+#option-btn4
+{
+	background: url(../img/login/under_construction.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
