@@ -1,3 +1,4 @@
+
 var table1 = new Array(10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120);//传表格的值
 var table2 = new Array(100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 900, 800);//传表格的值
 var table3 = new Array(22,33,44,55,66,77,88,9,99,102,23,12);
@@ -48,7 +49,7 @@ function setAxis(arr){
 }
 
 //画图的函数
-function fillchart(chart, valuepic, arr, name1, name2) {
+function fillchart(chart, valuepic, arr, name) {
 	mistakeStep = 20; //允许点击的误差范围
 	var point = new Map();
 	var pointValue = new Map(); //值
@@ -113,11 +114,11 @@ function fillchart(chart, valuepic, arr, name1, name2) {
 		ctx.fillText(Wert, Xpos, Ypos + i * Ystep);
 	}
 	ctx.fillStyle = "#E4E4E4";
-	ctx.fillText(name1, -40, -175);
+	ctx.fillText(name, -40, -175);
 	ctx.fillText("月份", 270, 10);
 	ctx.fillStyle = "#FFFFFF";
 	ctx.font = "15px Calibri";
-	ctx.fillText(name2, 125, -180);
+	ctx.fillText("运单量", 125, -180);
 	ctx.strokeStyle = "#E4E4E4";
 	for(var i = 1; i < 6; i++) {
 		ctx.moveTo(0, i * (-30));
@@ -228,7 +229,7 @@ function fillchart(chart, valuepic, arr, name1, name2) {
 		window.attachEvent('onload', load);
 	} else {}
 }
-function createTable(name1, name2, j, tableV) {
+function createTable(name, j, tableV) {
 
 	var table = document.getElementsByClassName("data")[j];
 	var tr = document.createElement("tr");
@@ -258,11 +259,12 @@ function createTable(name1, name2, j, tableV) {
 //	for(var i = 0;i<tableV.length;i++){
 //		alert(tableV[i]);
 //	}
-fillchart(document.getElementsByClassName("chart")[j], document.getElementsByClassName("valuePic")[j], tableV, name1, name2);
+fillchart(document.getElementsByClassName("chart")[j], document.getElementsByClassName("valuePic")[j], tableV, name);
 }
-createTable("个数", "运单量", 0, table2);
-createTable("金额", "运单量", 1, table1);
-createTable("重量", "运单量", 2, table4);
-createTable("折扣", "运单量", 3, table3);
+//要创建新的表就在这里写咯
+createTable("个数", 0, table2);
+createTable("金额", 1, table1);
+createTable("重量", 2, table4);
+createTable("折扣", 3, table3);
 
 
