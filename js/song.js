@@ -3,6 +3,7 @@ var table1 = new Array(10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120);//传�
 var table2 = new Array(100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 900, 800);//传表格的值
 var table3 = new Array(22,33,44,55,66,77,88,9,99,102,23,12);
 var table4 = new Array(234,345,456,567,678,789,890,123,234,452,642,123);
+var tableMonth = new Array(8,9,10,11,12,1,2,3,4,5,6,7); //这个是月份的数组
 var t = new Array();//放后面表的月份的对象
 var d = new Array();//放表数值的对象
 
@@ -229,7 +230,7 @@ function fillchart(chart, valuepic, arr, name) {
 		window.attachEvent('onload', load);
 	} else {}
 }
-function createTable(name, j, tableV) {
+function createTable(name, j, tableV,tableM) {
 
 	var table = document.getElementsByClassName("data")[j];
 	var tr = document.createElement("tr");
@@ -240,7 +241,7 @@ function createTable(name, j, tableV) {
 	tr.appendChild(td);
 	for(var i = 0; i < 12; i++) {
 		t[i] = document.createElement("td");
-		t[i].innerHTML = i + 1;
+		t[i].innerHTML = tableM[i];
 		tr.appendChild(t[i]);
 	}
 	var tr2 = document.createElement("tr");
@@ -256,15 +257,16 @@ function createTable(name, j, tableV) {
 		tr2.appendChild(d[i]);
 	}
 	tableV = setAxis(tableV);
-//	for(var i = 0;i<tableV.length;i++){
-//		alert(tableV[i]);
-//	}
+
 fillchart(document.getElementsByClassName("chart")[j], document.getElementsByClassName("valuePic")[j], tableV, name);
 }
-//要创建新的表就在这里写咯
-createTable("个数", 0, table2);
-createTable("金额", 1, table1);
-createTable("重量", 2, table4);
-createTable("折扣", 3, table3);
+
+
+//要创建新的表就在这里写咯 第一个table数组是放值，第二个table数组是放月份
+
+createTable("个数", 0, table2,tableMonth);
+createTable("金额", 1, table1,tableMonth);
+createTable("重量", 2, table4,tableMonth);
+createTable("折扣", 3, table3,tableMonth);
 
 
