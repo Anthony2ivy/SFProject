@@ -1,0 +1,83 @@
+	html,
+	body {
+		width: 100%;
+		background-color: rgb(67, 66, 64);
+		padding: 0;
+		margin: 0;
+		font-size: 15px;
+	}
+	a {
+		color: white;
+		text-decoration: none;
+	}
+	
+	.pageFunction {
+		margin-top: 50px;
+		margin-left: 50px;
+		width: 600px;
+		height: 200px;
+		color: white;
+		line-height: 30px;
+		text-align: center;
+	}
+	
+	ul {
+		float: left;
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+	}
+	
+	li {
+		display: inline;
+	}
+	
+	input {
+		width: 40px;
+		height: 20px;
+		font-size: 15px;
+	}
+	
+	.pageup,
+	.pagedown,
+	.pagefinal,
+	.pagefirst {
+		padding: 5px;
+		width: 40px;
+		height: 30px;
+		border: solid 1px white;
+		font-size: 15px;
+		
+	}
+	.pageup:hover{
+		cursor: pointer;
+	}
+	.pagedown:hover{
+		cursor: pointer;
+	}
+	.pagefirst:hover{
+		cursor: pointer;
+	}
+	.pagefinal:hover{
+		cursor: pointer;
+	}
+	
+	.pagedown {
+		margin-left: 5px;
+	}
+	
+	.pagemiddle {
+		width: 15px;
+		height: 30px;
+		/*border: solid 1px white;*/
+		font-size: 15px;
+		color: white;
+	}
+	.pagemiddle:hover{
+		cursor: pointer;
+	}
+	
+	.gopage {
+		width: 160px;
+		float: left;
+	}

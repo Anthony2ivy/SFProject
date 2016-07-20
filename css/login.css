@@ -2,9 +2,11 @@ html,
 body {
 	margin: 0;
 	height: 100%;
-	background-image: url(../img/login/background.png);
+	background-image: url(../img/backgroundgif.gif);
 	background-size: cover;
+	background-position: center;
 	font-family: "微软雅黑";
+	transition: background-image 1s;
 }
 
 #header {
@@ -195,10 +197,9 @@ body {
 }
 
 .option-block li {
-	display: block;
+	display: none;
 	padding: 15% 3% 0 3%;
 	width: 25%;
-	display: inline-block;
 	float: left;
 	font-family: "微软雅黑";
 	text-align: center;
